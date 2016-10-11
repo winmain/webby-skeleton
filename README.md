@@ -5,7 +5,7 @@ _webby-skeleton_ is a minimal working example using [webby].
 Run in shell
 
 ```shell
-git clone git@github.com:citrum/webby-skeleton.git
+git clone https://github.com/citrum/webby-skeleton.git
 cd webby-skeleton
 sbt
 ```
