@@ -1,5 +1,9 @@
 _webby-skeleton_ is a minimal working example using [webby].
 
+## Requirements
+
+Make sure you have installed [sbt].
+
 ## Usage
 
 Run in shell
@@ -23,4 +27,5 @@ When server starts, point your browser to [http://localhost:4820](http://localho
 _webby-skeleton_ is licensed under [Apache License 2.0].
 
   [webby]: https://github.com/citrum/webby
+  [sbt]: https://www.scala-sbt.org/
   [Apache License 2.0]: http://www.apache.org/licenses/LICENSE-2.0
