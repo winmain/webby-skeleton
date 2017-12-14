@@ -1,6 +1,6 @@
 package lib.html
 
-import webby.commons.text.html.{HtmlBuffer, StdHtmlView}
+import webby.html.{HtmlBuffer, StdHtmlView}
 
 abstract class HtmlView(buf: HtmlBuffer = new HtmlBuffer) extends StdHtmlView(buf) {
 
