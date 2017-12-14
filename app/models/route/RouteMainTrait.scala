@@ -1,5 +1,6 @@
 package models.route
 
+import webby.mvc.script.{StdRouteAssetsTrait, StdRouteJsSourceMapTrait}
 import webby.route.v2.{BaseRoute, Route, RouteRoute}
 
 /**
@@ -7,7 +8,7 @@ import webby.route.v2.{BaseRoute, Route, RouteRoute}
   *
   * Attention! No code formatting!
   */
-trait RouteLocalhostTrait[R] extends BaseRoute[R] {
+trait RouteLocalhostTrait[R] extends BaseRoute[R] with StdRouteAssetsTrait[R] with StdRouteJsSourceMapTrait[R] {
   protected val toDomain: String = "localhost:4820"
 
   def main: R =                                             get"/"

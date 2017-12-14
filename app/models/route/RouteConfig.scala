@@ -7,6 +7,6 @@ object RouteConfig extends RouteConfigV2 {
   def basePathSplitter: BasePathSplitter = SimpleBasePathSplitterWithAdmEqual
 
   override def routePacks: Array[RoutePack[_]] = Array(
-    RoutePack(HandlersLocalhost, RouteLocalhost, new OneDomainProvider("localhost"))
+    RoutePack(HandlersMain, RouteLocalhost, new OneDomainProvider("localhost"))
   )
 }
