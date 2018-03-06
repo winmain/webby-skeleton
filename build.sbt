@@ -6,11 +6,13 @@ scalaVersion := "2.12.4"
 
 resolvers += Resolver.bintrayRepo("citrum", "maven")
 
+val webbyVersion = "0.7.5"
+
 // Webby library
-libraryDependencies += "com.github.citrum.webby" %% "webby" % "0.7.2"
+libraryDependencies += "com.github.citrum.webby" %% "webby" % webbyVersion
 
 // Haxe support
-libraryDependencies += "com.github.citrum.webby" % "webby-haxe" % "0.7.2" classifier "haxe"
+libraryDependencies += "com.github.citrum.webby" % "webby-haxe" % webbyVersion classifier "haxe"
 
 // SASS support
 libraryDependencies += "io.bit3" % "jsass" % "5.5.3" % "optional" // Used in webby.mvc.script.compiler.LibSassCompiler
@@ -27,4 +29,7 @@ wrRestartExitCode := Some(2)
 
 // Haxe support for development
 haxeIdeaSettings
-javaOptions in wr ++= haxeCompilerJavaParams.value
+javaOptions in wr ++= (haxeCompilerJavaParams in Compile).value
+
+// Enable haxe test environment
+useHaxeTestTask

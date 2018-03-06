@@ -1,3 +1,4 @@
+import models.AppPaths
 import models.route.RouteConfig
 import webby.api._
 import webby.api.mvc.{Handler, RequestHeader}
@@ -11,6 +12,10 @@ object Global extends GlobalSettings {
   private var requestHandler: RequestHandlerV2 = _
 
   def reqHandler: RequestHandlerV2 = requestHandler
+
+  override def initObjects(app: Application): Unit = {
+    AppPaths // For tests
+  }
 
   override def onStart(app: Application) {
     implicit def executionContext: ExecutionContext = ExecutionPlugin.getExecutionContext
